@@ -1,4 +1,5 @@
 const config = {
+    MAX_ATTACHMENT_SIZE: 5000000,
     // Backend config
     s3: {
         REGION: 'us-east-1',
