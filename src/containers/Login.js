@@ -25,8 +25,7 @@ export default function Login() {
         setIsLoading(true);
 
         try {
-            const user = await Auth.signIn(fields.email, fields.password);
-            await Auth.completeNewPassword(user, 'PkyAHuEWbq2Muc_2', {});
+            await Auth.signIn(fields.email, fields.password);
             userHasAuthenticated(true);
         } catch (e) {
             onError(e);
