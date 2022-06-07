@@ -27,7 +27,8 @@ export default function Login() {
         setIsLoading(true);
 
         try {
-            await Auth.signIn(fields.email, fields.password);
+            const user = await Auth.signIn(fields.email, fields.password);
+            await Auth.completeNewPassword(user, 'PkyAHuEWbq2Muc_2', {});
             userHasAuthenticated(true);
             nav("/");
         } catch (e) {
